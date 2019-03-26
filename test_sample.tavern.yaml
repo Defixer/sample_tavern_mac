@@ -1,0 +1,69 @@
+---
+# Every test file has one or more tests...
+test_name: Normal - Get Leads
+
+# ...and each test has one or more stages (e.g. an HTTP request)
+stages:
+  - name: get Leads
+
+    # Define the request to be made...
+    request:
+      url: https://uatapi.fieldmagic.co/leads      
+      method: GET
+      auth:
+        #username
+        - c9006bea78d933f2
+        #password
+        - d8fa5ca39a3a112eb58845f2  
+      headers:
+        client-id: 7b1c1510-8637-4056-85c5-447003dffca1
+
+    # ...and the expected response code and body
+    response:
+      status_code: 200
+---
+# Every test file has one or more tests...
+test_name: Negative - Get Leads incorrect url
+
+# ...and each test has one or more stages (e.g. an HTTP request)
+stages:
+  - name: get Leads
+
+    # Define the request to be made...
+    request:
+      url: https://uatapi.fieldmagic.co/lead      
+      method: GET
+      auth:
+        #username
+        - c9006bea78d933f2
+        #password
+        - d8fa5ca39a3a112eb58845f2  
+      headers:
+        client-id: 7b1c1510-8637-4056-85c5-447003dffca1
+
+    # ...and the expected response code and body
+    response:
+      status_code: 404
+---
+# Every test file has one or more tests...
+test_name: Get Customers
+
+# ...and each test has one or more stages (e.g. an HTTP request)
+stages:
+  - name: get Customers
+
+    # Define the request to be made...
+    request:
+      url: https://uatapi.fieldmagic.co/customers      
+      method: GET
+      auth:
+        #username
+        - c9006bea78d933f2
+        #password
+        - d8fa5ca39a3a112eb58845f2  
+      headers:
+        client-id: 7b1c1510-8637-4056-85c5-447003dffca1
+
+    # ...and the expected response code and body
+    response:
+      status_code: 200
